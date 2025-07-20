@@ -1,8 +1,8 @@
-# Fullstack Technical Challenge
+# Fullstack Technical Challenge - Backend Implementation
 
 ## Overview
 
-This is a simple task management application designed as a technical interview challenge. The goal is to assess fullstack development skills by having candidates implement either the frontend or backend portion of the application while the other half is already provided.
+This is a simple task management application designed as a technical interview challenge. The frontend is already implemented and all end-to-end tests are provided. Your task is to implement the backend API to make all tests pass.
 
 ## Challenge Structure
 
@@ -18,7 +18,7 @@ For the interview, candidates will receive:
 
 ## Challenge Goal
 
-Your task is to implement the missing half of the application so that all end-to-end tests pass. The tests serve as your specification and success criteria.
+Your task is to implement the backend API in `src/backend/server.ts` so that all end-to-end tests pass. The tests serve as your specification and success criteria. The frontend is already fully implemented and expects the API to be running on http://localhost:3000.
 
 ## Time Limit
 
