@@ -143,6 +143,9 @@ class TaskManager {
     }
 }
 
+// Expose TaskManager to window for testing
+(window as any).TaskManager = TaskManager;
+
 document.addEventListener('DOMContentLoaded', () => {
     new TaskManager();
 });

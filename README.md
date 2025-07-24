@@ -33,14 +33,21 @@ Your task is to implement the backend API in `src/backend/server.ts` so that all
    bun install
    ```
 
-2. Run the tests to see what needs to be implemented:
+2. Install Playwright browsers (first time only):
+   ```bash
+   npx playwright install
+   # or
+   bunx playwright install
+   ```
+
+3. Run the tests to see what needs to be implemented:
    ```bash
    npm test
    # or
-   bun test
+   bun run test
    ```
 
-3. Start development servers:
+4. Start development servers:
    ```bash
    npm run dev
    # or
