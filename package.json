@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "tsx watch src/backend/server.ts",
-    "dev:frontend": "concurrently \"node src/frontend/watcher.js\" \"http-server src/frontend -p 3001 -c-1\"",
+    "dev:frontend": "vite src/frontend --port 3001",
     "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "tsc",
-    "build:frontend": "tsc -p tsconfig.frontend.json",
+    "build:frontend": "vite build src/frontend",
     "test": "playwright test",
     "test:ui": "playwright test --ui"
   },
@@ -24,10 +24,9 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.0",
-    "chokidar": "^3.6.0",
     "concurrently": "^8.2.2",
-    "http-server": "^14.1.1",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
   }
 }
