@@ -9,15 +9,7 @@ docker run -d --rm \
    -p 3000:3000 \
    -p 3001:3001 \
    mcr.microsoft.com/playwright:v1.52.0-noble
-# Wait for services to start
+
+npm run dev &
 echo "Starting services..."
-sleep 5
-
-npm run dev:backend &
-npm run dev:frontend &
-# Open browsers
-npx open http://localhost:3000 &
-npx open http://localhost:3001 &
-
-# Run Playwright UI
-npm run test:ui
+npx wait-on --http-get http://localhost:3000 http://localhost:3001 && npm run test:ui
