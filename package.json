@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "tsx watch src/backend/server.ts",
-    "dev:frontend": "concurrently \"tsc -p tsconfig.frontend.json --watch\" \"http-server src/frontend -p 3001 -c-1\"",
+    "dev:frontend": "concurrently \"node src/frontend/watcher.js\" \"http-server src/frontend -p 3001 -c-1\"",
     "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "tsc",
     "build:frontend": "tsc -p tsconfig.frontend.json",
