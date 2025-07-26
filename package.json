@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "tsx watch src/backend/server.ts",
-    "dev:frontend": "http-server src/frontend -p 3001 -c-1",
+    "dev:frontend": "concurrently \"tsc -p tsconfig.frontend.json --watch\" \"http-server src/frontend -p 3001 -c-1\"",
     "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "tsc",
     "build:frontend": "tsc -p tsconfig.frontend.json",
@@ -24,6 +24,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.0",
+    "chokidar": "^3.5.3",
     "concurrently": "^8.2.2",
     "http-server": "^14.1.1",
     "tsx": "^4.7.0",
