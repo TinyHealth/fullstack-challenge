@@ -9,3 +9,8 @@
 // 5. Make sure all tests pass!
 //
 // Refer to the README.md for the complete API specification and UI requirements
+
+// NOTE: When you implement TaskManager, expose it for Playwright tests
+if (typeof window !== 'undefined' && typeof TaskManager !== 'undefined') {
+    window.TaskManager = TaskManager;
+}
