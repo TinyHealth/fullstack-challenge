@@ -130,6 +130,10 @@ class TaskManager {
         });
     }
 }
+
+// Expose TaskManager to window so tests can verify its presence
+window.TaskManager = TaskManager;
+
 document.addEventListener('DOMContentLoaded', () => {
     new TaskManager();
 });
