@@ -130,6 +130,10 @@ class TaskManager {
         });
     }
 }
+
+// Expose TaskManager so Playwright tests can access the class
+window.TaskManager = TaskManager;
+
 document.addEventListener('DOMContentLoaded', () => {
     new TaskManager();
 });
